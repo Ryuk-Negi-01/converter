@@ -1,0 +1,167 @@
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: thistle;
+  border: 2px dashed thistle;
+  border-radius: 10px;
+  padding: 30px 25px;
+  height: auto;
+  width: 90%;
+  max-width: 420px;
+  box-sizing: border-box;
+  background-color: #1e1e2f3b;
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: thistle;
+  margin: 0 0 25px 0;
+}
+
+#convertor {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+input,
+select {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 2px solid thistle;
+  border-radius: 10px;
+  background-color: #2d2d3f;
+  color: thistle;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #d8bfd8;
+  box-shadow: 0 0 8px thistle;
+}
+
+input::placeholder {
+  color: #b8a9c9;
+}
+
+#resultBox {
+  width: 100%;
+  gap: 10px;
+}
+
+#result {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid thistle;
+  border-radius: 8px;
+  background-color: #2d2d3f;
+  color: thistle;
+  text-align: center;
+  min-height: 30px;
+}
+
+#result:empty::before {
+  content: attr(data-placeholder);
+  color: #9f8ba4;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border: 2px solid thistle;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: thistle;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: thistle;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px thistle;
+}
+
+#bg {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  display: flex;
+  justify-content: center;
+}
+
+#coin {
+  width: 70%;
+  height: 70%;
+  animation: spin 3s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  #container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  #result {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}

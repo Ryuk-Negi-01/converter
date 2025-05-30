@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Currency Convertor</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div id="bg">
+      <img src="./coin.png" id="coin" alt="bg" />
+    </div>
+    <div id="container">
+      <h1>Currency Convertor</h1>
+      <div id="convertor">
+        <div>
+          <select id="currency1">
+            <option value="USD">$ USD - US Dollar</option>
+            <option value="AUD">$ AUD - Australian Dollar</option>
+            <option value="BRL">$ BRL - Brazilian Real</option>
+            <option value="CAD">$ CAD - Canadian Dollar</option>
+            <option value="CHF">  CHF - Swiss Franc</option>
+            <option value="CNY">¥ CNY - Chinese Yuan</option>
+            <option value="EUR">€ EUR - Euro</option>
+            <option value="GBP">£ GBP - British Pound</option>
+            <option value="INR" selected>₹ INR - Indian Rupee</option>
+            <option value="JPY">¥ JPY - Japanese Yen</option>
+            <option value="KRW">₩ KRW - South Korean Won</option>
+            <option value="NZD">$ NZD - New Zealand Dollar</option>
+            <option value="RUB">₽ RUB - Russian Ruble</option>
+            <option value="SGD">$ SGD - Singapore Dollar</option>
+          </select>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+        <br />
+        <div id="resultBox">
+          <select id="currency2">
+            <option value="USD">$ USD - US Dollar</option>
+            <option value="AUD">$ AUD - Australian Dollar</option>
+            <option value="BRL">$ BRL - Brazilian Real</option>
+            <option value="CAD">$ CAD - Canadian Dollar</option>
+            <option value="CHF">  CHF - Swiss Franc</option>
+            <option value="CNY">¥ CNY - Chinese Yuan</option>
+            <option value="EUR">€ EUR - Euro</option>
+            <option value="GBP">£ GBP - British Pound</option>
+            <option value="INR">₹ INR - Indian Rupee</option>
+            <option value="JPY">¥ JPY - Japanese Yen</option>
+            <option value="KRW">₩ KRW - South Korean Won</option>
+            <option value="NZD">$ NZD - New Zealand Dollar</option>
+            <option value="RUB">₽ RUB - Russian Ruble</option>
+            <option value="SGD">$ SGD - Singapore Dollar</option>
+          </select>
+          <div id="result" data-placeholder="Result"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
